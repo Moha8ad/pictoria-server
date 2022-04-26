@@ -18,9 +18,10 @@ app.use('/posts', postRoutes);
 app.get('/', (req, res) => {
     res.send('works')
 })
+CONNECTION_URL = "mongodb+srv://moha8ad:9tL4v4lP68hxB7Nz@bargasht.mjrkw.mongodb.net/postsDB?retryWrites=true&w=majority"
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(process.env.CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT, () => console.log(`Server is running on port ${PORT}`)))
     .catch(error=> console.log(error));
