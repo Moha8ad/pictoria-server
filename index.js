@@ -1,13 +1,12 @@
-import dotenv from "dotenv";
-dotenv.config({ silent: process.env.NODE_ENV === 'production' });
-
 import express from "express";
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 
 import postRoutes from './routes/posts.routes.js';
 
 const app = express();
+dotenv.config();
 
 app.use(express.json({ limit: '30mb', extended: true}));
 app.use(express.urlencoded({ limit: '30mb', extended: true}));
