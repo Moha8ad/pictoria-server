@@ -18,7 +18,7 @@ app.use('/posts', postRoutes);
 app.get('/', (req, res) => {
     res.send('works')
 })
-CONNECTION_URL = "mongodb+srv://moha8ad:9tL4v4lP68hxB7Nz@bargasht.mjrkw.mongodb.net/postsDB?retryWrites=true&w=majority"
+const CONNECTION_URL = "mongodb+srv://moha8ad:9tL4v4lP68hxB7Nz@bargasht.mjrkw.mongodb.net/postsDB?retryWrites=true&w=majority"
 
 const PORT = process.env.PORT || 5000;
 
